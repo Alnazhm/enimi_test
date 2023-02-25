@@ -269,7 +269,7 @@ class StudentBoardDetailPageView(LoginRequiredMixin,DetailView):
             context['age'] = ""
         return context
 
-    def dispatch(self, request, *args, **kwargs):
-        if not request.user.is_authenticated or not request.user.type == "tutor":
-            raise PermissionDenied
-        return super().dispatch(request, *args, **kwargs)
+#     def dispatch(self, request, *args, **kwargs):
+#         if not request.user.is_authenticated or not request.user.type == "tutor":
+#             raise PermissionDenied
+#         return super().dispatch(request, *args, **kwargs)
