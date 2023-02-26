@@ -32,7 +32,7 @@ jobs:
       - name: Deploy to server
         uses: appleboy/ssh-action@master
         with:
-          host: 143.92.180.176
+          host: 142.93.180.176
           username: zhuldyz
           password: Zhuldyz1@3
           script: |
