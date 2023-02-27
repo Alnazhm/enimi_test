@@ -1,8 +1,7 @@
+
 name: Django CI/CD
 
 on:
-  push:
-    branches: [ master ]
   pull_request:
     branches: [ master ]
 
@@ -32,9 +31,9 @@ jobs:
       - name: Deploy to server
         uses: appleboy/ssh-action@master
         with:
-          host: 142.93.180.176
-          username: zhuldyz
-          password: Zhuldyz1@3
+          host: ${{SSH_HOST}}
+          username: ${{SSH_USER}}
+          password: ${{SSH_TOKEN}}
           script: |
             cd /root/enimi1602
             docker-compose down
